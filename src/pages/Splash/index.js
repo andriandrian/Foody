@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native'
-import { Logo, SplashBackground } from '../../assets'
+import { Credit, Logo, SplashBackground } from '../../assets'
 
 const Splash = ({ navigation }) => {
 
     useEffect(() => {
         setTimeout(() => {
-            navigation.replace('MainApp');
+            navigation.replace('Login');
         }, 2000)
     }, [navigation]);
 
@@ -28,5 +28,5 @@ const styles = StyleSheet.create({
     logo: {
         width: 222,
         height: 105,
-    }
+    },
 })

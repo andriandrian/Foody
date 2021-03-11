@@ -26,7 +26,9 @@ const Home = () => {
                     <Text style={styles.recommendText}>Recommended for You</Text>
                 </View>
                 <View style={styles.container}>
-                    <Recommended />
+                    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+                        <Recommended />
+                    </ScrollView>
                 </View>
                 <Gap height={29} />
                 <Tab.Navigator>
@@ -95,8 +97,7 @@ const styles = StyleSheet.create({
         color: WARNA_UTAMA,
     },
     container: {
-        marginLeft: 23,
-        marginRight: 12,
+        paddingLeft: 23,
     }
 })
 

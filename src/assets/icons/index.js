@@ -10,6 +10,12 @@ import IconFavoriteActive from './favoriteActive.svg'
 import IconStar from './star.svg'
 import IconAdd from './addButton.svg'
 import IconAdds from './addButton2.svg'
+import IconArrow from './arrow.svg'
+import IconMinus from './minusButton.svg'
+import IconEdit from './edit.svg'
+import IconVerified from './verified.svg'
+import IconBCA from './bca.svg'
+import IconOVO from './ovo.svg'
 
 export {
     IconHome,
@@ -24,4 +30,10 @@ export {
     IconStar,
     IconAdd,
     IconAdds,
+    IconArrow,
+    IconMinus,
+    IconEdit,
+    IconVerified,
+    IconBCA,
+    IconOVO,
 }

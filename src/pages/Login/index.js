@@ -2,7 +2,6 @@ import React from 'react'
 import { Button, Image, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { Logo } from '../../assets'
-import { AuthLogin } from '../../components'
 import { WARNA_SEKUNDER, WARNA_UTAMA } from '../../utils/constant'
 
 const Login = ({ navigation }) => {
@@ -13,22 +12,34 @@ const Login = ({ navigation }) => {
             </View>
             <Text style={styles.heading}>Selamat Datang!</Text>
             <Text style={styles.subHeading}>Silakan masuk untuk melanjutkan</Text>
-            <AuthLogin />
+            <View style={styles.inputContainer}>
+                <Text style={styles.text}>Username atau Email</Text>
+                <TextInput
+                    style={styles.input}
+                    placeholder={'Masukkan Username atau Email'}
+                    placeholderTextColor={'#272626'}
+                    underlineColorAndroid='transparent'
+                />
+            </View>
+            <View style={styles.inputContainer}>
+                <Text style={styles.text}>Password</Text>
+                <TextInput
+                    style={styles.input}
+                    placeholder={'Masukkan Password'}
+                    placeholderTextColor={'#272626'}
+                    secureTextEntry
+                    underlineColorAndroid='transparent'
+                />
+            </View>
+            <TouchableOpacity style={styles.btnMasuk}>
+                <Text style={styles.textBtn}>Masuk</Text>
+            </TouchableOpacity>
             <View style={styles.loginContainer} onPress={() => this.props.navigation.navigate('MainApp')}>
                 <Text style={styles.textLogin}>Atau</Text>
             </View>
-            <Button
-                style={styles.btnRegister}
-                title="Masuk"
-                color='#46600E'
-                onPress={() => navigation.navigate('MainApp')}
-            />
-            <Button
-                style={styles.btnRegister}
-                title="Buat Akun"
-                color="#728648"
-                onPress={() => navigation.navigate('Register')}
-            />
+            <TouchableOpacity style={styles.btnBuatAkun}>
+                <Text style={styles.textBtn}>Buat Akun</Text>
+            </TouchableOpacity>
         </ScrollView>
     )
 }
